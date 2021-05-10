@@ -10,13 +10,13 @@ public class PostmanEchoTest {
     @Test
     void shouldTestPost() {
         given()
-                .baseUri("https://postman-echo.com")
-                .body("Test test")
-                .when()
-                .post("/post")
-                .then()
-                .statusCode(200)
-                .body("data", equalTo("Test"))
+            .baseUri("https://postman-echo.com")
+            .body("Test test")
+        .when()
+            .post("/post")
+        .then()
+            .statusCode(200)
+            .body("data", equalTo("Test test"))
         ;
     }
 }
